@@ -11,4 +11,4 @@ class AuthorForm(ModelForm):
 class BlogForm(ModelForm):
     class Meta:
         model = BlogTable
-        fields = ['title', 'blog']
+        fields = ['author', 'title', 'blog']
