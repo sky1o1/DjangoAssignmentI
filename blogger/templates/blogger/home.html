@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'templates/css/style.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+<div id="head">
+<h1>Welcome to the Blog</h1>
+</div>
+
+<div class="container">
+    <a class="btn btn-fill" href="{% url 'blog:create' %}">Write a Blog</a>
+    <a class="btn btn-trans" href="{% url 'blog:list' %}">List Blog</a>
+</div>
+
+</body>
+</html>

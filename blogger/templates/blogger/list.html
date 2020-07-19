@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'templates/css/style.css' %}">
+    <title>List</title>
+</head>
+<body>
+<div class="head">
+        <a id="txt" href="{% url 'blog:home' %}">HOME</a>
+        <a id="txt" href="{% url 'blog:create' %}">CREATE</a>
+</div>
+
+{% for d in data %}
+<div class="list_cont">
+
+    <h1>{{d.title}}</h1><br>
+    <p>{{d.blog}}</p>
+
+    <div id="date">{{d.created_at}}</div>
+    <div id="name">-{{d.id}}</div>
+</div>
+{% endfor %}
+
+</body>
+</html>

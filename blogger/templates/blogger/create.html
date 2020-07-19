@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'templates/css/style.css' %}">
+    <title>Create</title>
+</head>
+<body>
+<div class="head">
+        <a id="txt" href="{% url 'blog:home' %}">HOME</a>
+        <a id="txt" href="{% url 'blog:list' %}">LIST</a>
+</div>
+<div class="form_cont">
+    <form method="post">
+        {% csrf_token %}
+        <div class="inp">
+            {{form1.as_p}}
+            {{form2.as_p}}
+        </div>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
